@@ -1,0 +1,113 @@
+/*
+Theme Name: VSA Vintage
+Theme URI: http://localhost/vsa
+Author: Équipe BUT MMI
+Description: Thème de blocs vintage pour Les Vieilles Soupapes d'Artois (jaune plaque de rallye, bleu marine, papier ancien).
+Version: 1.0.0
+Requires at least: 6.5
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+Text Domain: vsa-vintage
+*/
+:root{--creme:#F9F3DD;--sable:#EADFC0;--marine:#14284B;--jaune:#E3B023;--brique:#9C2F1C;--bleu:#2B5A87;--chrome:#BDB6A4;--papier:#FFFAF0;
+--checker:conic-gradient(#14284B 25%,#F9F3DD 0 50%,#14284B 0 75%,#F9F3DD 0) 0 0/28px 28px;
+--orn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='24' viewBox='0 0 260 24'%3E%3Cg fill='none' stroke='%2314284B' stroke-width='2'%3E%3Cpath d='M0 12H98M162 12H260'/%3E%3Cpath d='M0 8H92M168 8H260' stroke-width='1'/%3E%3C/g%3E%3Cg fill='%2314284B'%3E%3Cpath d='M130 2l8 10-8 10-8-10z'/%3E%3Ccircle cx='108' cy='12' r='3'/%3E%3Ccircle cx='152' cy='12' r='3'/%3E%3C/g%3E%3Cpath d='M130 7l4 5-4 5-4-5z' fill='%23E3B023'/%3E%3C/svg%3E")}
+body{background:var(--creme)}
+a{text-underline-offset:3px}
+img{max-width:100%;height:auto}
+/* bannière et menu */
+.vsa-banner{background:var(--creme);text-align:center}
+.vsa-banner img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto}
+.vsa-header,.vsa-header>.wp-block-group{margin:0;padding:0}
+.vsa-nav{background:var(--marine);box-shadow:inset 0 -3px 0 var(--chrome);position:sticky;top:0;z-index:30;margin:0;padding:0}
+body.admin-bar .vsa-nav{top:32px}
+.vsa-nav::after{content:"";display:block;height:14px;background:var(--checker)}
+.vsa-nav .wp-block-navigation{max-width:1120px;margin:0 auto;padding:0 16px;gap:0 4px}
+.vsa-nav .wp-block-navigation-item__content{font-family:'Oswald','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:500;font-size:1rem;color:#F9F3DD;padding:14px 14px;text-decoration:none}
+.vsa-nav .wp-block-navigation-item__content:hover,.vsa-nav .current-menu-item>.wp-block-navigation-item__content{color:var(--jaune);box-shadow:inset 0 -4px var(--jaune)}
+.vsa-nav .vsa-cta{margin-left:auto}
+.vsa-nav .vsa-cta>.wp-block-navigation-item__content{background:var(--jaune);color:var(--marine)!important;border:2px solid var(--chrome);border-radius:8px;padding:8px 18px;margin:6px 0;box-shadow:none}
+.vsa-nav .vsa-cta>.wp-block-navigation-item__content:hover{background:#fff}
+.vsa-nav .wp-block-navigation__submenu-container{background:var(--marine)!important;border:0;min-width:260px}
+.vsa-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content{text-transform:none;letter-spacing:.02em;font-family:'Source Sans 3',sans-serif}
+.wp-block-navigation__responsive-container.is-menu-open{background:var(--marine)!important;color:#F9F3DD}
+.wp-block-navigation__responsive-container-open{color:#F9F3DD}
+/* en-tête de page */
+.vsa-head{background:var(--sable);box-shadow:inset 0 -5px 0 var(--marine),inset 0 -9px 0 var(--creme),inset 0 -12px 0 var(--marine);padding:40px 16px 52px;position:relative;overflow:hidden;margin:0}
+.vsa-head>*{position:relative;z-index:1;max-width:1120px;margin-left:auto!important;margin-right:auto!important}
+.vsa-head>*{width:100%;box-sizing:border-box}
+.vsa-head h1,.vsa-head .wp-block-post-title,.vsa-head .wp-block-query-title{max-width:1120px!important;padding-right:min(350px,36%);margin-top:0;margin-bottom:.2em}
+.vsa-head h1::after,.vsa-head .wp-block-post-title::after{content:"";display:block;width:120px;height:8px;border-top:3px solid var(--brique);border-bottom:3px solid var(--brique);margin-top:12px}
+.vsa-head::after{content:"";position:absolute;right:max(16px,calc(50% - 560px));bottom:4px;width:min(330px,34%);aspect-ratio:2/1;background:url(assets/ill/car.svg) no-repeat center/contain}
+.vsa-ill-hy .vsa-head::after{background-image:url(assets/ill/hy.svg)}.vsa-ill-moto .vsa-head::after{background-image:url(assets/ill/moto.svg)}.vsa-ill-bus .vsa-head::after{background-image:url(assets/ill/bus.svg)}
+.vsa-head p{max-width:50ch}
+.vsa-meta{gap:16px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;color:var(--brique)}
+.vsa-meta p,.vsa-meta .wp-block-post-date{margin:0}
+/* sections */
+.vsa-section{padding:48px 16px;margin:0}
+.vsa-first{padding-top:24px;padding-bottom:0}
+.vsa-alt{background:var(--sable)}
+.vsa-page{padding:40px 16px 56px;margin:0}
+main.wp-block-group{margin:0!important}
+.wp-site-blocks>*{margin-block-start:0}
+.vsa-section>*,.vsa-join>*{max-width:1120px}
+.vsa-kicker,.wp-block-post-terms.vsa-kicker a{display:inline-block;background:var(--brique);color:#F9F3DD!important;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:.95rem;padding:3px 18px 3px 12px;margin:0 0 8px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%);text-decoration:none}
+.vsa-script{font-family:'Kaushan Script',cursive;color:var(--bleu);font-size:1.5rem;margin:0 0 .3em}
+.vsa-date,.wp-block-post-date.vsa-date{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--brique);font-size:1rem;margin:0 0 .2em}
+.vsa-alert{background:#fff8e1;border:3px solid var(--brique);border-radius:10px;box-shadow:inset 0 0 0 3px #fff8e1,inset 0 0 0 5px var(--brique);padding:16px 22px}
+.vsa-alert p{margin:0}
+hr.wp-block-separator.vsa-orn{border:0!important;height:24px;width:200px!important;max-width:100%;background:var(--orn) center/contain no-repeat;margin:28px auto}
+/* boutons */
+.wp-block-button__link{box-shadow:inset 0 0 0 2px var(--jaune),inset 0 0 0 4px var(--marine),0 4px 0 var(--marine);text-decoration:none;transition:transform .1s}
+.wp-block-button__link:hover{background:var(--marine)!important;color:var(--jaune)!important;transform:translateY(2px);box-shadow:inset 0 0 0 2px var(--marine),inset 0 0 0 4px var(--jaune),0 2px 0 var(--marine)}
+.wp-block-button.is-style-outline>.wp-block-button__link{background:var(--creme)!important;color:var(--marine)!important}
+.wp-block-button.is-style-outline>.wp-block-button__link:hover{background:var(--marine)!important;color:var(--jaune)!important}
+/* cartes */
+.vsa-cards{gap:24px}
+.vsa-card{background:var(--papier);border:3px solid var(--marine);border-radius:6px;box-shadow:6px 6px 0 var(--marine);overflow:hidden;padding:0;height:100%}
+.vsa-card .wp-block-image{margin:0}
+.vsa-card .wp-block-image img{width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:3px solid var(--marine);display:block}
+.vsa-card>:not(.wp-block-image){margin-left:22px!important;margin-right:22px!important}
+.vsa-card h3{margin-top:18px;margin-bottom:6px}.vsa-card p{margin-top:0}.vsa-card>:last-child{margin-bottom:22px}
+/* photos "tirage d'album" */
+.vsa-plate{background:#fffdf6;padding:12px 12px 38px;box-shadow:0 10px 24px rgba(40,25,10,.35);transform:rotate(-1.5deg);position:relative;margin:18px 0}
+.vsa-plate img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.vsa-plate::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-3deg);background:rgba(227,176,35,.75);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.vsa-plate::after{content:"Les Vieilles Soupapes d’Artois";position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:'Kaushan Script',cursive;color:var(--marine);font-size:.95rem}
+.vsa-photoband{border-top:6px solid var(--marine);border-bottom:6px solid var(--jaune);margin:0!important}
+.vsa-article img,.wp-block-post-content img{border:6px solid #fffdf6;box-shadow:0 4px 12px rgba(40,25,10,.25);height:auto}
+.wp-block-gallery .wp-block-image img{border:8px solid #fffdf6;border-bottom-width:22px;box-shadow:0 6px 14px rgba(40,25,10,.3);border-radius:2px}
+/* listes d'articles */
+.vsa-list .wp-block-post{border-top:3px double var(--marine);padding:18px 0}
+.vsa-list .wp-block-post-title{font-family:'Source Sans 3',sans-serif;font-size:1.4rem;line-height:1.3;margin:.1em 0}
+.vsa-list .wp-block-post-title a,.vsa-news .wp-block-post-title a{color:var(--marine);text-decoration:none}.vsa-list .wp-block-post-title a:hover,.vsa-news .wp-block-post-title a:hover{color:var(--brique);text-decoration:underline}
+.vsa-news .wp-block-post{border-top:4px solid var(--marine);padding-top:14px}
+.vsa-news .wp-block-post-title{font-family:'Source Sans 3',sans-serif;text-transform:none;letter-spacing:0;font-size:1.15rem;line-height:1.3;margin:.2em 0}
+.vsa-chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0 0 24px}
+.vsa-chips li{margin:0}.vsa-chips a{display:inline-flex;align-items:center;min-height:44px;padding:6px 16px;border:2px solid var(--marine);border-radius:99px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--marine);text-decoration:none}
+.vsa-chips a:hover{background:var(--marine);color:var(--jaune)}
+.vsa-postnav{margin-top:40px;padding-top:18px;border-top:3px double var(--marine);gap:20px}
+/* adhésion / bandeau jaune */
+.vsa-join{background:var(--marine);color:var(--creme);text-align:center;border-top:6px solid var(--jaune)}
+.vsa-join h2{color:var(--jaune)}
+.vsa-join .wp-block-buttons{justify-content:center}
+.vsa-price{font-family:'Alfa Slab One',serif;font-size:3rem;color:var(--brique);line-height:1;margin:0}
+.vsa-box{background:var(--papier);border:3px solid var(--marine);border-radius:6px;box-shadow:6px 6px 0 var(--chrome);padding:22px}
+/* pied de page */
+.vsa-footer{background:var(--marine);color:var(--creme);box-shadow:inset 0 6px 0 var(--jaune);padding:44px 16px 28px;margin:0}
+.vsa-footer h3{color:var(--jaune)}.vsa-footer a{color:var(--creme)}
+.vsa-footlist{list-style:none;margin:0;padding:0}.vsa-footlist li{margin:0 0 .4em}
+.vsa-copy{text-align:center;font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;opacity:.85;margin-top:24px}
+@media(max-width:781px){
+ .vsa-head h1,.vsa-head .wp-block-post-title,.vsa-head .wp-block-query-title{padding-right:0}
+ .vsa-head::after{position:static;display:block;width:200px;margin:12px 0 -30px auto}
+ .vsa-head{padding-bottom:40px}
+ .vsa-nav .vsa-cta{margin-left:0}
+}
+/* menu : couleurs forcées (le bloc Navigation impose sinon la couleur du texte) */
+.vsa-nav .wp-block-navigation,.vsa-nav .wp-block-navigation a:where(:not(.wp-element-button)),.vsa-nav .wp-block-navigation-item__content,.vsa-nav .wp-block-navigation-submenu__toggle{color:#F9F3DD!important}
+.vsa-nav .wp-block-navigation-item__content:hover,.vsa-nav .current-menu-item>.wp-block-navigation-item__content,.vsa-nav .wp-block-navigation a:where(:not(.wp-element-button)):hover{color:#E3B023!important}
+.vsa-nav .vsa-cta>.wp-block-navigation-item__content,.vsa-nav .vsa-cta>a{color:#14284B!important}
+.vsa-nav .wp-block-navigation__submenu-icon svg{stroke:#F9F3DD}
+.vsa-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content{color:#F9F3DD!important}
+.wp-block-navigation__responsive-container.is-menu-open a,.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{color:#F9F3DD!important}
